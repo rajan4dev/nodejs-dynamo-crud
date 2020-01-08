@@ -1,0 +1,30 @@
+{
+  "name": "user-management-service",
+  "version": "1.0.0",
+  "description": "simple user management dynamodb crud",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajan4dev/user-management-service.git"
+  },
+  "keywords": [
+    "dynamodb"
+  ],
+  "author": "Rajan Bhirud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajan4dev/user-management-service/issues"
+  },
+  "homepage": "https://github.com/rajan4dev/user-management-service#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
