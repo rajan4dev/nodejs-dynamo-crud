@@ -1,5 +1,5 @@
 {
-  "name": "user-management-service",
+  "name": "nodejs-dynamo-crud",
   "version": "1.0.0",
   "description": "simple user management dynamodb crud",
   "main": "server.js",
@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/rajan4dev/user-management-service#readme",
   "dependencies": {
+    "aws-sdk": "^2.600.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

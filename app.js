@@ -1,12 +1,32 @@
+require('dotenv').config({path: './config/.env'});//sets environment variables using .env file
+
 const express = require("express");
 
 const app = express();
 
-const morgan = require('morgan');
+const morgan = require('morgan');//logger
+
+const bodyParser = require('body-parser');//parse body from http request
 
 const userRoutes = require('./api/routes/users');
 
-app.use(morgan('dev'));//will log all requests with format 'dev' and internally call next function to pass request to next middleware which is to handle /users in this case
+app.use(morgan('dev'));//will log all requests with 'dev' format and internally call next function to pass request to next middleware
+
+app.use(bodyParser.urlencoded({extended : false})); //type of request bodies to parse
+app.use(bodyParser.json());//type of request bodies to parse
+
+app.use((req, res, next)=>{
+   res.header("Access-Control-Allow-Origin","*");
+   res.header(
+       "Access-Control-Allow-Headers",
+       "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+   );
+   if(req.method === 'OPTIONS'){//browser will always send an OPTION req first, when you send a post/put request to check if it can make that request
+        req.header("Access-Control-Allow-Methods", 'PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).json({});
+   }
+   next();
+});
 
 app.use('/users', userRoutes);//for path starting with /users , let userRoutes handle the request
 
