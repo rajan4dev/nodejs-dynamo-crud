@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rajan4dev/user-management-service.git"
+    "url": "git+https://github.com/rajan4dev/nodejs-dynamo-crud.git"
   },
   "keywords": [
     "dynamodb"
@@ -17,9 +17,9 @@
   "author": "Rajan Bhirud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rajan4dev/user-management-service/issues"
+    "url": "https://github.com/rajan4dev/nodejs-dynamo-crud/issues"
   },
-  "homepage": "https://github.com/rajan4dev/user-management-service#readme",
+  "homepage": "https://github.com/rajan4dev/nodejs-dynamo-crud#readme",
   "dependencies": {
     "aws-sdk": "^2.600.0",
     "body-parser": "^1.19.0",
