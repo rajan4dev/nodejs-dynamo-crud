@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "660e9ec4-45d5-4f28-8308-c0a4c29b8fe1",
+		"name": "Dynamo CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Jane Doe\",\n    \"email\" : \"janedoe22@jd.com\",\n    \"role\" : \"NotAdmin\",\n    \"mobileNumber\":\"124421\"\n} "
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/296e44ac-27f7-4c63-81fa-4eda72a07c9e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"296e44ac-27f7-4c63-81fa-4eda72a07c9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/296e44ac-27f7-4c63-81fa-4eda72a07c9e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"296e44ac-27f7-4c63-81fa-4eda72a07c9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role\": \"Gareeb\",\n    \"email\": \"anedo@jd.com\",\n    \"mobileNumber\": \"1237972521\",\n    \"name\": \"Aane do\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/78d26a7b-b82a-4d17-8104-d1fbd80a2b51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"78d26a7b-b82a-4d17-8104-d1fbd80a2b51"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
